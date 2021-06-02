@@ -26,7 +26,7 @@ public interface MainApi {
     Observable<ServerResult<NullResult>> notRequest(@Query("params") String params);
 
     @GET("v1/app/config")
-    @com.keqin.server.ServerRequest(ConfigRequest.class)
+    @ServerRequest(ConfigRequest.class)
     Observable<ServerResult<ConfigBean>> config(@Query("params") String params);
 
     @POST("v1/sms/verifycode")
